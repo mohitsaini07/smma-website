@@ -1,30 +1,30 @@
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { useEffect, useRef } from "react";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Workflow = () => {
-  const stepsRef = useRef([]);
+  // const stepsRef = useRef([]);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
 
-    stepsRef.current.forEach((step) => {
-      gsap.fromTo(
-        step,
-        { opacity: 0 },
-        {
-          opacity: 1,
-          scrollTrigger: {
-            trigger: step,
-            start: "top center+=200",
-            end: "top center",
-            scrub: true,
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
-  }, []);
+  //   stepsRef.current.forEach((step) => {
+  //     gsap.fromTo(
+  //       step,
+  //       { opacity: 0 },
+  //       {
+  //         opacity: 1,
+  //         scrollTrigger: {
+  //           trigger: step,
+  //           start: "top center+=200",
+  //           end: "top center",
+  //           scrub: true,
+  //           toggleActions: "play none none reverse",
+  //         },
+  //       }
+  //     );
+  //   });
+  // }, []);
 
   return (
     <div className=" text-white py-10 px-6">
@@ -53,7 +53,7 @@ const Workflow = () => {
             {/* Step 1 */}
             <div
               className="relative p-6 bg-gray-300 rounded-lg shadow-lg"
-              ref={(el) => (stepsRef.current[0] = el)}
+              // ref={(el) => (stepsRef.current[0] = el)}
             >
               <div className="absolute left-[-60px] top-0 text-6xl font-extrabold text-gray-700">
                 1
@@ -68,7 +68,7 @@ const Workflow = () => {
             {/* Step 2 */}
             <div
               className="relative p-6 bg-gray-900 rounded-lg shadow-lg"
-              ref={(el) => (stepsRef.current[1] = el)}
+              // ref={(el) => (stepsRef.current[1] = el)}
             >
               <div className="absolute left-[-60px] top-0 text-6xl font-extrabold text-gray-700">
                 2
@@ -83,7 +83,7 @@ const Workflow = () => {
             {/* Step 3 */}
             <div
               className="relative p-6 bg-gray-300 rounded-lg shadow-lg"
-              ref={(el) => (stepsRef.current[2] = el)}
+              // ref={(el) => (stepsRef.current[2] = el)}
             >
               <div className="absolute left-[-60px] top-0 text-6xl font-extrabold text-gray-600">
                 3
@@ -99,7 +99,7 @@ const Workflow = () => {
             {/* Step 4 */}
             <div
               className="relative p-6 bg-gray-900 rounded-lg shadow-lg"
-              ref={(el) => (stepsRef.current[2] = el)}
+              // ref={(el) => (stepsRef.current[2] = el)}
             >
               <div className="absolute left-[-60px] top-0 text-6xl font-extrabold text-gray-600">
                 4
@@ -116,7 +116,7 @@ const Workflow = () => {
             {/* Step 5 */}
             <div
               className="relative p-6 bg-gray-300 rounded-lg shadow-lg"
-              ref={(el) => (stepsRef.current[2] = el)}
+              // ref={(el) => (stepsRef.current[2] = el)}
             >
               <div className="absolute left-[-60px] top-0 text-6xl font-extrabold text-gray-600">
                 5
@@ -132,7 +132,7 @@ const Workflow = () => {
             {/* Step 6 */}
             <div
               className="relative p-6 bg-gray-900 rounded-lg shadow-lg"
-              ref={(el) => (stepsRef.current[2] = el)}
+              // ref={(el) => (stepsRef.current[2] = el)}
             >
               <div className="absolute left-[-60px] top-0 text-6xl font-extrabold text-gray-600">
                 6
